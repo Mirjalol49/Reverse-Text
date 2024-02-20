@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
+
+* {
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    height    : 100%;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    height : auto;
+}
+
+body {
+    display         : flex;
+    flex-direction  : column;
+    height          : 100%;
+    margin          : 0;
+    padding         : 0;
+    font-family     : "Gochi Hand", cursive;
+    color           : #494a4b;
+    background      : #f1f5f8;
+    background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+    background-size : 25px 25px;
+}
+
+/* VISUALLY-HIDDEN */
+.visually-hidden {
+    position   : absolute;
+    width      : 1px;
+    height     : 1px;
+    margin     : -1px;
+    padding    : 0;
+    border     : 0;
+    white-space: nowrap;
+    clip-path  : inset(100%);
+    clip       : rect(0 0 0 0);
+    overflow   : hidden;
+}
+
+/* CONTAINER */
+.container {
+    width        : 100%;
+    max-width    : 1200px;
+    margin-right : auto;
+    margin-left  : auto;
+    padding-right: 20px;
+    padding-left : 20px;
+
+}
+
+/* STICKY-FOOTER */
+.site-main {
+    flex-grow: 1;
+}
+
+p {
+    display      : inline-block;
+    margin       : 0;
+    overflow-wrap: break-word;
+}
+
+.wrapper {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-direction : column;
+}
+
+.main-title {
+    transform       : rotate(2deg);
+    padding         : 0.2rem 1.2rem;
+    border-radius   : 20% 5% 20% 5%/5% 20% 25% 20%;
+    background-color: rgba(0, 255, 196, 0.7);
+    font-size       : 50px;
+}
+
+@media screen and (max-width: 400px) {
+    .main-title {
+        font-size: 30px;
+    }
+}
+
+.input-text {
+    font-size    : 30px;
+    border       : none;
+    border-bottom: 5px dashed hotpink;
+    width        : 100%;
+    max-width    : fit-content;
+    background   : transparent;
+    outline      : none;
+    padding      : 10px;
+    color        : rgba(63, 62, 65, 0.7);
+
+}
+
+.reverse-btn {
+    padding         : 0;
+    border          : none;
+    transform       : rotate(2deg);
+    transform-origin: center;
+    font-family     : inherit;
+    text-decoration : none;
+    padding-bottom  : 3px;
+    border-radius   : 5px;
+    box-shadow      : 0 2px 0 #494a4b;
+    transition      : all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-image: url("data:image/gif;base64,R0lGODlhBAAEAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NUY1OENCRDdDMDYxMUUyOTEzMEE1MEM5QzM0NDVBMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5NUY1OENCRTdDMDYxMUUyOTEzMEE1MEM5QzM0NDVBMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk1RjU4Q0JCN0MwNjExRTI5MTMwQTUwQzlDMzQ0NUEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk1RjU4Q0JDN0MwNjExRTI5MTMwQTUwQzlDMzQ0NUEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAAQABAAAAgYEEpdoeQUAOw==");
+    background-color: rgba(0, 255, 196, 0.7);
+    width           : 100%;
+    max-width       : 400px;
+    margin-top      : 20px;
+}
+
+.reverse-btn span {
+    font-size    : 25px;
+    background   : #f1f5f8;
+    display      : block;
+    padding      : 0.5rem 1rem;
+    border-radius: 5px;
+    border       : 2px solid #494a4b;
+    width        : 100%;
+    display      : block;
+    cursor       : pointer;
+}
+
+.reverse-btn:active,
+.reverse-btn:focus {
+    transform     : translateY(2px);
+    padding-bottom: 0px;
+    outline       : 0;
+}
+
+.output-wrapper {
+    width           : 100%;
+    max-width       : 400px;
+    margin-top      : 20px;
+    background-color: #fff;
+    border-radius   : 6px;
+    border          : 3px dashed hotpink;
+    padding         : 5px 5px 0 5px;
+
+}
+
+.output-title {
+    display      : inline-block;
+    font-family  : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size    : 20px;
+    font-weight  : 600;
+    border-bottom: 2px solid #494a4b;
+    margin       : 5px 0;
+}
+
+.output {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size  : 20px;
+
+
+}
+
+.copy-btn {
+    width           : 100%;
+    background-color: rgba(0, 255, 196, 0.7);
+    border          : none;
+    outline         : none;
+    padding         : 5px;
+    font-size       : 20px;
+    border-radius   : 0 0 5px 5px;
+    font-weight     : 600;
+    color           : #494a4b;
+    cursor          : pointer;
+    transition      : 0.3s all;
+
+}
+
+.copy-btn:hover {
+    opacity: 0.8;
+}
+
+.copy-btn:active {
+    opacity: 0.6;
+
+}
